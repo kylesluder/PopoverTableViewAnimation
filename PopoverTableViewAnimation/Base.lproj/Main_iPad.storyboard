@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="AFr-hp-Ayw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller - Here's a Popover-->
+        <scene sceneID="ZXu-29-w6o">
+            <objects>
+                <tableViewController id="Oee-hG-hPu" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KX1-CQ-0VR" customClass="NoAnimationsTableView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" textLabel="D6a-e5-cci" style="IBUITableViewCellStyleDefault" id="TAg-fF-38Y">
+                                <rect key="frame" x="0.0" y="86" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TAg-fF-38Y" id="83T-X4-lrN">
+                                    <rect key="frame" x="0.0" y="0.0" width="735" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Push another!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D6a-e5-cci">
+                                            <rect key="frame" x="15" y="0.0" width="718" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Oee-hG-hPu" kind="push" identifier="push" id="LHJ-20-UC8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Oee-hG-hPu" id="73d-8K-m6K"/>
+                            <outlet property="delegate" destination="Oee-hG-hPu" id="dIY-ua-ZAg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Here's a Popover" id="PS9-Qc-QiH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYu-Pi-U6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601" y="1398"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A18-jL-y2L">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="6FK-R0-sfb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TN9-pI-Gy3">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Oee-hG-hPu" kind="relationship" relationship="rootViewController" id="mjO-Bk-7lF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQH-RF-LGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1583" y="1398"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wfi-EY-fF5">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="AFr-hp-Ayw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hK8-ED-kyz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K2f-bE-50L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbK-uv-PPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1588" y="182"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmu-4u-AMg">
+                                <rect key="frame" x="272" y="612" width="225" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Workaround" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAR-JN-E0l">
+                                        <rect key="frame" x="20" y="25" width="128" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N9U-Dz-MCM">
+                                        <rect key="frame" x="156" y="20" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="toggleUseWorkaround:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fhl-TP-dw2"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DAR-JN-E0l" firstAttribute="leading" secondItem="wmu-4u-AMg" secondAttribute="leading" constant="20" symbolic="YES" id="65E-oB-PZ8"/>
+                                    <constraint firstAttribute="bottom" secondItem="N9U-Dz-MCM" secondAttribute="bottom" constant="20" symbolic="YES" id="9as-7F-FkJ"/>
+                                    <constraint firstItem="N9U-Dz-MCM" firstAttribute="leading" secondItem="DAR-JN-E0l" secondAttribute="trailing" constant="8" symbolic="YES" id="Fh4-J7-LhV"/>
+                                    <constraint firstItem="DAR-JN-E0l" firstAttribute="centerY" secondItem="N9U-Dz-MCM" secondAttribute="centerY" id="diR-ZJ-gDZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="N9U-Dz-MCM" secondAttribute="trailing" constant="20" symbolic="YES" id="lpI-QA-cPy"/>
+                                    <constraint firstItem="N9U-Dz-MCM" firstAttribute="top" secondItem="wmu-4u-AMg" secondAttribute="top" constant="20" symbolic="YES" id="oQX-py-Z7a"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="480" translatesAutoresizingMaskIntoConstraints="NO" id="OvN-4X-OVs">
+                                <rect key="frame" x="144" y="421" width="480" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Present the popover, then tap the row to push a new view controller.
+
+Notice that the vertical scroller and the disclosure triangle on the second row animate poorly.
+
+Then toggle the switch below and try again. The bad animations are gone, but the table view’s height does not animate after using the Back button.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="OvN-4X-OVs" secondAttribute="centerX" id="PQD-UG-mHF"/>
+                            <constraint firstAttribute="centerY" secondItem="OvN-4X-OVs" secondAttribute="centerY" id="Pji-Fy-lQD"/>
+                            <constraint firstItem="OvN-4X-OVs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.625" id="cGV-Re-bNi"/>
+                            <constraint firstItem="wmu-4u-AMg" firstAttribute="top" secondItem="OvN-4X-OVs" secondAttribute="bottom" constant="8" symbolic="YES" id="edt-aJ-qsl"/>
+                            <constraint firstAttribute="centerX" secondItem="wmu-4u-AMg" secondAttribute="centerX" id="wbL-zQ-yFz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ac0-iw-Sbv">
+                        <barButtonItem key="leftBarButtonItem" title="Popover" id="MNG-pm-5bK">
+                            <connections>
+                                <segue destination="6FK-R0-sfb" kind="popover" identifier="popover" popoverAnchorBarButtonItem="MNG-pm-5bK" id="qEY-l7-bVS">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="182"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="mjO-Bk-7lF"/>
+    </inferredMetricsTieBreakers>
+</document>
